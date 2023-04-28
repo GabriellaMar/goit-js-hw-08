@@ -35,12 +35,18 @@ function onFormSubmit(event)  {
   const mail = emailInput.value;
   const message = messageArea.value;
 
-  const formData = {
-    email: mail,
-    message: message
-  };
-  console.log(formData);
-  feedbackForm.reset();
+  if (mail !== '' && message !== '') {
+    const formData = {
+      email: mail,
+      message: message
+    };
+    console.log(formData);
+
+    feedbackForm.reset();
+}
+else {
+    alert('Всі поля форми повинні бути заповнені.')
+}
   localStorage.removeItem(LOCALSTORAGE_KEY);
 };
 

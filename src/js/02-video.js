@@ -7,7 +7,7 @@ const player = new Player(iframe);
 
 const STORAGETIME_KEY = "videoplayer-current-time";
 
-const onTimeUpdate = function (data) {
+const onTimeUpdate = (data) => {
     localStorage.setItem(STORAGETIME_KEY, data.seconds);
     // console.log(data.seconds)
 };
